@@ -5,6 +5,7 @@ import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-s
 import Tippy from '@tippyjs/react/headless';
 import { useEffect, useState } from 'react';
 import { Wrapper as PopperWrapper } from '../Popper';
+import AccountItem from '../AccountItem';
 
 const cx = classNames.bind(styles);
 
@@ -60,7 +61,12 @@ function Header() {
                     visible={searchResult.length > 0}
                     render={(attrs) => (
                         <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                            <PopperWrapper>My name</PopperWrapper>
+                            <PopperWrapper>
+                                <h4 className={cx('search-acc')}>Account</h4>
+                                <AccountItem></AccountItem>
+                                <AccountItem></AccountItem>
+                                <AccountItem></AccountItem>
+                            </PopperWrapper>
                         </div>
                     )}
                 >
