@@ -6,6 +6,7 @@ import Tippy from '@tippyjs/react/headless';
 import { useEffect, useState } from 'react';
 import { Wrapper as PopperWrapper } from '../Popper';
 import AccountItem from '../AccountItem';
+import Button from '../Button';
 
 const cx = classNames.bind(styles);
 
@@ -14,7 +15,7 @@ function Header() {
 
     useEffect(() => {
         setTimeout(() => {
-            setSearchResult([1, 2, 3]);
+            setSearchResult([]);
         }, 0);
     }, []);
     return (
@@ -82,7 +83,12 @@ function Header() {
                     </div>
                 </Tippy>
 
-                <div className={cx('action')}></div>
+                <div className={cx('action')}>
+                    <Button text>Upload</Button>
+                    <Button primary onClick={() => alert('Clicked!')}>
+                        Log in
+                    </Button>
+                </div>
             </div>
         </header>
     );
