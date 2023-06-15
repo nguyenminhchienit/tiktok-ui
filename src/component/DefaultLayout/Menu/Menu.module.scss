@@ -1,0 +1,17 @@
+.menu-list {
+    width: 224px;
+
+    .menu-item {
+        margin-left: 0;
+    }
+}
+
+.menu-item {
+    padding: 11px 16px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    &:hover {
+        background-color: rgb(248, 248, 248);
+    }
+}
