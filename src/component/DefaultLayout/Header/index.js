@@ -1,21 +1,10 @@
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faCircleXmark,
-    faEarthAsia,
-    faEllipsisVertical,
-    faKeyboard,
-    faMagnifyingGlass,
-    faQuestion,
-    faSpinner,
-} from '@fortawesome/free-solid-svg-icons';
-import Tippy from '@tippyjs/react/headless';
-import { useEffect, useState } from 'react';
-import { Wrapper as PopperWrapper } from '../Popper';
-import AccountItem from '../AccountItem';
-import Button from '../Button';
+import { faEarthAsia, faEllipsisVertical, faKeyboard, faQuestion } from '@fortawesome/free-solid-svg-icons';
 import Menu from '../Menu';
+import Button from '../Button';
+import Search from '../Search';
 
 const cx = classNames.bind(styles);
 
@@ -51,14 +40,6 @@ const MENU_ITEM = [
 ];
 
 function Header() {
-    const [searchResult, setSearchResult] = useState([]);
-
-    useEffect(() => {
-        setTimeout(() => {
-            setSearchResult([]);
-        }, 0);
-    }, []);
-
     const handleMenuChange = (menuItem) => {
         console.log(menuItem);
     };
@@ -101,31 +82,8 @@ function Header() {
                         ></path>
                     </svg>
                 </div>
-                <Tippy
-                    interactive={true}
-                    visible={searchResult.length > 0}
-                    render={(attrs) => (
-                        <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                            <PopperWrapper>
-                                <h4 className={cx('search-acc')}>Account</h4>
-                                <AccountItem></AccountItem>
-                                <AccountItem></AccountItem>
-                                <AccountItem></AccountItem>
-                            </PopperWrapper>
-                        </div>
-                    )}
-                >
-                    <div className={cx('search')}>
-                        <input type="text" placeholder="Search account and video" spellCheck={false}></input>
-                        <button className={cx('clear')}>
-                            <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-                        </button>
-                        <FontAwesomeIcon className={cx('loading')} icon={faSpinner}></FontAwesomeIcon>
-                        <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
-                        </button>
-                    </div>
-                </Tippy>
+
+                <Search></Search>
 
                 <div className={cx('action')}>
                     <Button text>Upload</Button>
