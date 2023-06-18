@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 
-import * as request from '../until/request';
+import * as searchServices from '../apiServeices/searchServices';
 import { Wrapper as PopperWrapper } from '../Popper';
 import AccountItem from '../AccountItem';
 import { useEffect, useState, useRef } from 'react';
@@ -28,21 +28,12 @@ function Search() {
             return;
         }
 
-        setLoading(true);
-
         const fetchApi = async () => {
-            try {
-                const res = await request.get('users/search', {
-                    params: {
-                        q: debounced,
-                        type: 'less',
-                    },
-                });
-                setSearchResult(res.data);
-                setLoading(false);
-            } catch {
-                setLoading(false);
-            }
+            setLoading(true);
+            const resultRes = await searchServices.search(debounced);
+            console.log(resultRes);
+            setSearchResult(resultRes);
+            setLoading(false);
         };
 
         fetchApi();
