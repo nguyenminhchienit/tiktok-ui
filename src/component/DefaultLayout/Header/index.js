@@ -27,6 +27,86 @@ const MENU_ITEM = [
                     code: 'en',
                     title: 'English',
                 },
+                {
+                    type: 'language',
+                    code: 'chi',
+                    title: 'Trung Quốc',
+                },
+                {
+                    type: 'language',
+                    code: 'hd',
+                    title: 'Hindi',
+                },
+                {
+                    type: 'language',
+                    code: 'es',
+                    title: 'Tây Ban Nha',
+                },
+                {
+                    type: 'language',
+                    code: 'sem',
+                    title: 'Ả Rập',
+                },
+                {
+                    type: 'language',
+                    code: 'fra',
+                    title: 'Pháp',
+                },
+                {
+                    type: 'language',
+                    code: 'beg',
+                    title: 'Bengal',
+                },
+                {
+                    type: 'language',
+                    code: 'rus',
+                    title: 'Nga',
+                },
+                {
+                    type: 'language',
+                    code: 'ger',
+                    title: 'Đức',
+                },
+                {
+                    type: 'language',
+                    code: 'bo',
+                    title: 'Bồ Đào Nha',
+                },
+                {
+                    type: 'language',
+                    code: 'swa',
+                    title: 'Swahili',
+                },
+                {
+                    type: 'language',
+                    code: 'jan',
+                    title: 'Nhật',
+                },
+                {
+                    type: 'language',
+                    code: 'mra',
+                    title: 'Marathi',
+                },
+                {
+                    type: 'language',
+                    code: 'tel',
+                    title: 'Telugu',
+                },
+                {
+                    type: 'language',
+                    code: 'tws',
+                    title: 'Thổ Nhĩ Kì',
+                },
+                {
+                    type: 'language',
+                    code: 'tma',
+                    title: 'Tamil',
+                },
+                {
+                    type: 'language',
+                    code: 'korea',
+                    title: 'Hàn',
+                },
             ],
         },
     },

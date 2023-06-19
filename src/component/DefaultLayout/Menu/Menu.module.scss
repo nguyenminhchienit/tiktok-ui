@@ -17,11 +17,16 @@
     }
 }
 
+.menu-body {
+    overflow-y: auto;
+}
+
 //Header
 .header {
-    // margin-top: -8px;
+    margin-top: -8px;
+    flex-shrink: 0;
     position: relative;
-    height: 50%;
+    height: 50px;
 }
 .back-btn {
     width: 50px;
