@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 
-import * as searchServices from '../apiServeices/searchServices';
+import * as searchServices from '../services/searchService';
 import { Wrapper as PopperWrapper } from '../Popper';
 import AccountItem from '../AccountItem';
 import { useEffect, useState, useRef } from 'react';

@@ -2,12 +2,12 @@ import Home from '../pages/Home';
 import Following from '../pages/Following';
 import Profile from '../pages/Profile';
 
-import routeConfig from '../component/DefaultLayout/config/routes';
+import config from '../component/DefaultLayout/config';
 
 const publicRoutes = [
-    { path: routeConfig.home, component: Home },
-    { path: routeConfig.following, component: Following },
-    { path: routeConfig.profile, component: Profile },
+    { path: config.routes.home, component: Home },
+    { path: config.routes.following, component: Following },
+    { path: config.routes.profile, component: Profile },
 ];
 
 const privateRoutes = [];

@@ -6,7 +6,7 @@ import Menu from '../Menu';
 import Button from '../Button';
 import Search from '../Search';
 import { Link } from 'react-router-dom';
-import routeConfig from '../config/routes';
+import config from '../config';
 
 const cx = classNames.bind(styles);
 
@@ -128,7 +128,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routeConfig.home} className={cx('logo')}>
+                <Link to={config.routes.home} className={cx('logo')}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="118" height="42" fill="currentColor" alt="TikTok">
                         <path
                             fill="#25F4EE"
