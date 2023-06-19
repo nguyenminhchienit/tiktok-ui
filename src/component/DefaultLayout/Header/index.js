@@ -169,7 +169,7 @@ function Header() {
 
                 <div className={cx('action')}>
                     <Button text>Upload</Button>
-                    <Button primary onClick={() => alert('Clicked!')}>
+                    <Button primary onClick={() => alert('Clicked!')} to="/">
                         Log in
                     </Button>
 
